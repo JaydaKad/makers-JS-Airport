@@ -10,3 +10,7 @@ Airport.prototype.land = function(plane){
 Airport.prototype.hangar = function(){
   return this._hangar;
 };
+
+Airport.prototype.takeOff = function() {
+  this._hangar.pop();
+};

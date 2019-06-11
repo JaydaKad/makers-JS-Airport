@@ -13,4 +13,12 @@ var plane;
 
   });
 
+  it("can allow plane to take off", function() {
+    airport.land(plane)
+    airport.takeOff()
+    expect(airport.hangar()).toEqual ([])
+
+
+  });
+
 });
