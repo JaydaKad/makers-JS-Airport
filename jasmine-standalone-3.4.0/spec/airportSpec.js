@@ -35,4 +35,9 @@ var plane;
     expect(function() {airport.land(plane)}).toThrow(new Error("Landing denied"));
   });
 
+  it("can override the default capacity", function() {
+    airport.setCapacity(50)
+    expect(airport.capacity()).toEqual (50)
+  });
+
 });
