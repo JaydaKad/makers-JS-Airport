@@ -3,8 +3,12 @@ function Airport(){
 
 };
 
-Airport.prototype.land = function(plane){
-  this._hangar.push(plane);
+Airport.prototype.land = function(plane, weather){
+  if (weather === "stormy"){
+    throw new Error('Landing denied')
+  } else {
+    this._hangar.push(plane);
+  };
 };
 
 Airport.prototype.hangar = function(){

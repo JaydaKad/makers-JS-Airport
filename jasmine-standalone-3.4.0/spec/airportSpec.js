@@ -24,5 +24,8 @@ var plane;
 
   });
 
+  it("won't land a plane if weather is stormy", function() {
+    expect(function() {airport.land(plane, "stormy")}).toThrow(new Error("Landing denied"));
+  });
 
 });
