@@ -1,10 +1,11 @@
 function Airport(){
   this._hangar = [];
+  this.capacity = 30;
 
 };
 
 Airport.prototype.land = function(plane, weather){
-  if (weather === "stormy"){
+  if (weather === "stormy" || this.capacity <= this._hangar.length) {
     throw new Error('Landing denied')
   } else {
     this._hangar.push(plane);

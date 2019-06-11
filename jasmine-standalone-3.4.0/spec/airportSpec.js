@@ -28,4 +28,11 @@ var plane;
     expect(function() {airport.land(plane, "stormy")}).toThrow(new Error("Landing denied"));
   });
 
+  it("won't land a plane if capacity is full", function() {
+    for(i = 0; i < 30; i++) {
+      airport.land(plane)
+    };
+    expect(function() {airport.land(plane)}).toThrow(new Error("Landing denied"));
+  });
+
 });
